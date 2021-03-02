@@ -1,0 +1,125 @@
+<!--
+ * @Author: D_bxg
+ * @Date: 2021-02-25 19:49:44
+ * @LastEditors: D_bxg
+ * @LastEditTime: 2021-03-02 11:24:40
+ * @Description: file content
+ * @FilePath: \huang-you-liang\ji-di.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- glide -->
+    <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
+    <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
+    <!-- css -->
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="index.min.css" />
+    <title>黄友良</title>
+  </head>
+  <body>
+    <nav class="flex nav">
+      <a href="index.html" style="flex: 10; display: flex">
+        <div class="nav__logo"></div>
+        <div class="nav__title">中外运信息平台</div>
+      </a>
+      <div style="flex: 6"></div>
+      <div class="nav__items">
+        <ul class="flex">
+          <a href="index.html" class="nav__a"><li>首页</li></a>
+          <a href="gong-si.html" class="nav__a "><li>公司简介</li></a>
+          <a href="quan-lian.html" class="nav__a "><li>全链路</li></a>
+          <!-- <a href="" class="nav__a"> -->
+            <li class="nav__itmes3 nav__itmes3--active">
+              运输服务
+              <div class="nav__meum">
+                <a href="ji-di.html" class="nav__meumitem">
+                  <div>寄递服务</div>
+                </a>
+                <a href="huo-wu.html" class="nav__meumitem">
+                  <div>货物跟踪</div>
+                </a>
+              </div>
+            </li>
+          <!-- </a> -->
+          <a href="gao-xiao.html" class="nav__a  "><li>高效运输</li></a>
+          <a href="lian-xi.html" class="nav__a "><li>联系我们</li></a>
+          <a href="xin-wen.html" class="nav__a"><li>新闻中心</li></a>
+        </ul>
+      </div>
+    </nav>
+    <div class="glide" id="home">
+      <!-- 轮播轨道 -->
+      <div class="glide__track" data-glide-el="track">
+        <!-- 所有轮播容器 -->
+        <div class="glide__slides">
+          <!-- 单个轮播组件 -->
+          <div class="glide__slide">
+            <!-- 轮播标题 -->
+            <div class="slide-caption">
+              <h1>用创新点缀人生，让科技融入理想。</h1>
+              <h3>
+                科技创新大平台，智慧生活新引擎。依靠科技进步推进经济跨越式发展。用创新点缀人生，让科技融入理想。
+              </h3>
+              <!-- 探索按钮 -->
+              <button class="explore-btn">探索更多</button>
+            </div>
+            <!-- 背景遮罩 -->
+            <div class="backdrop"></div>
+            <!-- 轮播图片 -->
+            <img src="./images/3.jpg" alt="" />
+          </div>
+          <!-- 第二张轮播 -->
+          <div class="glide__slide">
+            <div class="slide-caption left">
+              <h1>科技改变世界</h1>
+              <h3>
+                立足科学发展，着力自主创新。加速科技进步，为全市经济社会发展提供有力支撑。凝聚科技创意，成就创新梦想。
+              </h3>
+              <button class="explore-btn">探索更多</button>
+            </div>
+            <div class="backdrop"></div>
+            <!-- 轮播视频 -->
+            <!-- <video src="videos/working-man.mp4" muted autoplay loop></video> -->
+            <img src="./images/2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- glide 控制按钮 -->
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          《
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          》
+        </button>
+      </div>
+      <!-- glide 控制圆点 -->
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+      </div>
+    </div>
+    <footer class="content footer">
+      <div class="footer__row1">
+        <div>客服QQ：258506508</div>
+        <div>联系电话：020-000000</div>
+        <div>联系邮箱：xxx@.co.m</div>
+      </div>
+      <div class="footer__row2">©2020 - XXXXXXX平台 版权所有</div>
+    </footer>
+    <!-- 轮播插件 -->
+    <script src="libs/glide/glide.min.js"></script>
+    <!-- 动画组件 -->
+    <script src="libs/anime/anime.min.js"></script>
+    <!-- js -->
+    <script src="index.js"></script>
+  </body>
+</html>

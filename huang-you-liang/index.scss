@@ -1,0 +1,674 @@
+:root {
+  --vw100: calc(100vw-17px);
+  --primary-color: rgb(82, 181, 72);
+  --secondary-color: #e3e3e3;
+  --text-color-lightest: #e7e9ec;
+  --text-color-darker: #2e2e2e;
+  --text-color-dark: #494949;
+  --text-color-gray: #8b8b8b;
+  --text-color-dark-gray: #727272;
+  --text-color-light-gray: #c6c6c6;
+  --backdrop-color: rgba(42, 42, 42, 0.69);
+}
+* {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+html,
+body,
+ul,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #000;
+}
+li {
+  list-style: none;
+}
+// 封装样式
+.flex {
+  display: flex;
+}
+.content {
+  width: var(--vw100);
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10vh 20vh;
+}
+.contect {
+  &__radio {
+    & span {
+      padding: 10px;
+      line-height: 26px;
+      font-size: 2rem;
+      color: #999;
+    }
+  }
+  &__submit {
+    margin-top: 10vh;
+    width: 100%;
+    padding: 10px;
+    line-height: 26px;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    background-color: var(--primary-color);
+  }
+  &__text {
+    padding: 10px;
+    font-size: 1.6rem;
+
+    width: 100%;
+    &:focus {
+      outline: var(--primary-color) auto 4px;
+    }
+  }
+
+  &__title {
+    height: 10vh;
+    & p {
+      line-height: 26px;
+      font-size: 14px;
+      color: #999;
+    }
+    & h1 {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+  &__list {
+    height: 70vh;
+    display: flex;
+  }
+  &__left,
+  &__right {
+    flex: 5;
+    padding: 10px;
+  }
+  &__left {
+    & form {
+      & p {
+        padding: 10px;
+        line-height: 26px;
+        font-size: 2rem;
+        color: #999;
+        &::after {
+          content: "*";
+          color: red;
+        }
+      }
+    }
+  }
+  &__right {
+    padding: 0 10rem;
+    & article {
+      padding: 10px;
+      line-height: 4rem;
+      font-size: 2rem;
+      color: #999;
+    }
+    & font {
+      font-size: 4rem;
+      color: var(--primary-color);
+    }
+    & ul {
+      & li {
+        padding: 10px;
+        line-height: 26px;
+        font-size: 2rem;
+        color: #999;
+      }
+    }
+  }
+  &__radiotext {
+    padding: 10px;
+    line-height: 26px;
+    font-size: 2rem;
+    color: #999;
+  }
+}
+.glide {
+  height: 100vh;
+  overflow: hidden;
+  /* 定位标题和图片 */
+  position: relative;
+  /* 抵消导航高度 */
+
+  /* 放置在最下层 */
+  z-index: 50;
+  /* 轮播的图片和视频的大小 */
+  &__slide img,
+  &__slide video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  /* 轮播的布局 */
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__arrows,
+  &__bullets {
+    z-index: 70;
+  }
+}
+.slide {
+  /* 轮播标题容器 */
+  &-caption {
+    position: absolute;
+    /* 放置在遮罩上层 */
+    z-index: 70;
+    color: var(--text-color-lightest);
+    text-align: center;
+    max-width: 60vw;
+  }
+
+  /* 轮播标题默认不显示，在JS中用动画移入  */
+  &-caption > * {
+    opacity: 0;
+  }
+
+  /* 轮播标题中的主标语 */
+  &-caption h1 {
+    font-size: 54px;
+    font-weight: 600;
+  }
+
+  /* 轮播标题中的副标语 */
+  &-caption h3 {
+    font-size: 24px;
+    margin: 48px 0;
+  }
+
+  /* 第二页轮播标题布局方式 */
+  &-caption.left {
+    max-width: 80vw;
+    text-align: left;
+  }
+}
+
+/* 轮播遮罩层 */
+.backdrop {
+  background: var(--backdrop-color);
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 放置在幻灯片上层 */
+  z-index: 60;
+}
+
+/* 探索更多按钮 */
+.explore-btn {
+  padding: 14px 32px;
+  background-color: var(--primary-color);
+  border: 0;
+  border-radius: 4px;
+  color: var(--text-color-lightest);
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+}
+.intro {
+  position: relative;
+  display: flex;
+  background-image: url(./images/3.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  &__background {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    background-color: var(--text-color-darker);
+    z-index: 50;
+  }
+  &__title {
+    font-size: 4.8rem;
+    font-weight: bolder;
+    width: 100%;
+  }
+  .aaaaaa {
+    margin-bottom: 28vh;
+  }
+  .bbbbbb {
+    width: 80%;
+    margin: 4vh 0;
+  }
+  & p {
+    font-size: 2.4rem;
+  }
+  & article {
+    font-size: 1.4rem;
+    padding: 1rem;
+    line-height: 3.6rem;
+  }
+  & p.title {
+    font-size: 1.8rem;
+  }
+  & font {
+    color: var(--primary-color);
+  }
+  & img {
+    width: 100%;
+  }
+  &__article {
+    padding: 10px;
+  }
+  &__1,
+  &__2,
+  &__3 {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 60;
+    color: var(--text-color-lightest);
+  }
+  &__2 {
+    flex: 1.2;
+  }
+  &__3 {
+    flex: 0.8;
+  }
+}
+.nav {
+  &__a {
+    width: 100%;
+    height: 100%;
+    transition: all 0.1s ease-in-out;
+    &--active {
+      color: var(--primary-color);
+      border-bottom: 4px groove var(--primary-color);
+    }
+    &:hover {
+      color: var(--primary-color);
+      border-bottom: 4px groove var(--primary-color);
+    }
+  }
+  width: var(--vw100);
+  height: 10vh;
+  &__items {
+    margin-left: auto;
+    flex: 10;
+  }
+  &__items ul {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__items ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+  }
+  &__itmes3 {
+    position: relative;
+    &--active {
+      border-bottom: 4px groove var(--primary-color);
+    }
+    & div.nav__meum {
+      position: absolute;
+      display: none;
+      top: 9vh;
+      z-index: 10000;
+      width: 10vw;
+      background-color: #fff;
+
+      & div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        height: 8vh;
+        font-size: 1.6rem;
+        &:hover {
+          background-color: var(--text-color-light-gray);
+          color: var(--primary-color);
+        }
+      }
+    }
+    &:hover {
+      & div.nav__meum {
+        display: block;
+      }
+    }
+  }
+  &__logo {
+    background-image: url(./images/1.png);
+    background-size: 60%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    flex: 1;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    flex: 3;
+    color: var(--primary-color);
+    font-size: 3rem;
+  }
+}
+.news {
+  & img {
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+  }
+  &__title {
+    height: 10vh;
+    & p {
+      line-height: 26px;
+      font-size: 14px;
+      color: #999;
+    }
+    & h1 {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+  &__list {
+    width: 100%;
+    height: 70vh;
+  }
+  &__content {
+    transition: all 0.4s ease-in-out;
+    padding: 2vh;
+    & h1 {
+      margin-top: 2vh;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+      transition: all 0.4s ease-in-out;
+    }
+    .contentnews {
+      &__row {
+        display: flex;
+        & p {
+          margin-left: auto;
+        }
+      }
+      &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 20vh;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+      }
+      &__time {
+        margin-top: 2vh;
+
+        font-size: 1.6rem;
+        color: var(--text-color-gray);
+      }
+      &__detail {
+        margin-top: 2vh;
+
+        font-size: 1.4rem;
+        color: var(--text-color-gray);
+      }
+      &__config {
+        display: flex;
+        height: 4vh;
+        margin-top: 4vh;
+        .config {
+          &__btn {
+            padding: 8px;
+
+            color: var(--text-color-gray);
+            border-radius: 5px;
+            border: 1px solid var(--text-color-gray);
+          }
+          &__arrow {
+            margin-left: auto;
+            color: var(--text-color-gray);
+            padding: 8px;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px 8px rgba(182, 182, 182, 0.473);
+      border-radius: 5px;
+      & h1 {
+        color: var(--primary-color);
+      }
+      & img {
+        width: 120%;
+      }
+    }
+  }
+  .list {
+    display: flex;
+    &__left {
+      // background-color: red;
+      flex: 4;
+    }
+    &__right {
+      // background-color: blue;
+      flex: 6;
+    }
+  }
+}
+.scope {
+  &__title,
+  &__items {
+    width: 100%;
+  }
+  &__title {
+    display: flex;
+    height: 30vh;
+
+    & div {
+      flex: 2;
+      & p {
+        line-height: 26px;
+        font-size: 14px;
+        color: #999;
+      }
+      & h1 {
+        font-size: 24px;
+        line-height: 26px;
+      }
+    }
+    & article {
+      flex: 6;
+      font-size: 1.4rem;
+      font-weight: lighter;
+      line-height: 3.6rem;
+    }
+  }
+  &__items {
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__items div {
+    box-sizing: border-box;
+    padding: 10px;
+    flex: 1;
+    & p {
+      align-items: center;
+
+      font-size: 1.8rem;
+      height: 10vh;
+    }
+    & section {
+      height: 4vh;
+      & img {
+        height: 100%;
+      }
+    }
+    & article {
+      padding: 2.6rem;
+      height: 26vh;
+      font-size: 1.4rem;
+      color: var(--text-color-gray);
+    }
+    & p,
+    & section,
+    & article {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.parter {
+  background-color: rgb(243, 243, 243);
+  width: var(--vw100);
+  height: 30vh;
+  padding: 5vh 20vh;
+  display: flex;
+  &__title {
+    height: 10vh;
+    flex: 3;
+    & p {
+      line-height: 26px;
+      font-size: 14px;
+      color: #999;
+    }
+    & h1 {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+  &__list {
+    flex: 7;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__row {
+    width: 100%;
+    display: flex;
+    & li {
+      flex: 1;
+      transition: all 0.4s ease-in-out;
+      & img {
+        width: 80%;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.footer {
+  padding: 0 20vw;
+  height: 20vh;
+  background-color: var(--text-color-darker);
+  color: var(--text-color-lightest);
+  &__row1,
+  &__row2 {
+    color: var(--text-color-gray);
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__row1 {
+    & div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+  }
+  &__row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.tab {
+  width: 70vw;
+  height: 120vh;
+  margin: 10vh auto;
+  &__config {
+    display: flex;
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw;
+    padding: 1vw;
+    border-radius: 20px;
+    &:hover {
+      color: #fff;
+      background-color: var(--primary-color);
+    }
+    &--active {
+      color: #fff;
+      box-shadow: 0 0 5px 3px rgba(131, 223, 121, 0.644);
+      background-color: var(--primary-color);
+    }
+  }
+  &__content {
+    display: none;
+    margin: 1vw;
+    padding: 1vw;
+    animation: in-out 0.4s ease-in-out;
+  }
+  &__article {
+    margin: 6vh 0;
+    width: 100%;
+    display: flex;
+    & img {
+      width: 40%;
+      flex: 4;
+    }
+  }
+  &__context {
+    & img{
+      width: 90%;
+    }
+    & h1 {
+      color: #074780;
+      font-family: yahei;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 4vh;
+    }
+    & p {
+      color: #335170;
+      font-size: 15px;
+      font-family: yahei;
+      font-weight: bold;
+      line-height: 30px;
+    }
+    flex: 6;
+    padding: 0 1vw;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@keyframes in-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

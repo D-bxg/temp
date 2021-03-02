@@ -1,0 +1,349 @@
+<!--
+ * @Author: D_bxg
+ * @Date: 2021-02-22 13:53:11
+ * @LastEditors: D_bxg
+ * @LastEditTime: 2021-03-02 11:22:59
+ * @Description: file content
+ * @FilePath: \huang-you-liang\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- glide -->
+    <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
+    <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
+    <!-- css -->
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="index.min.css" />
+    <title>黄友良</title>
+  </head>
+  <body>
+    <nav class="flex nav">
+      <a href="index.html" style="flex: 10; display: flex">
+        <div class="nav__logo"></div>
+        <div class="nav__title">中外运信息平台</div>
+      </a>
+      <div style="flex: 6"></div>
+      <div class="nav__items">
+        <ul class="flex">
+          <a href="index.html" class="nav__a nav__a--active"><li>首页</li></a>
+          <a href="gong-si.html" class="nav__a"><li>公司简介</li></a>
+          <a href="quan-lian.html" class="nav__a"><li>全链路</li></a>
+          <!-- <a href="" class="nav__a"> -->
+            <li class="nav__itmes3">
+              运输服务
+              <div class="nav__meum">
+                <a href="ji-di.html" class="nav__meumitem">
+                  <div>寄递服务</div>
+                </a>
+                <a href="huo-wu.html" class="nav__meumitem">
+                  <div>货物跟踪</div>
+                </a>
+              </div>
+            </li>
+          <!-- </a> -->
+          <a href="gao-xiao.html" class="nav__a"><li>高效运输</li></a>
+          <a href="lian-xi.html" class="nav__a"><li>联系我们</li></a>
+          <a href="xin-wen.html" class="nav__a"><li>新闻中心</li></a>
+        </ul>
+      </div>
+    </nav>
+    <div class="glide" id="home">
+      <!-- 轮播轨道 -->
+      <div class="glide__track" data-glide-el="track">
+        <!-- 所有轮播容器 -->
+        <div class="glide__slides">
+          <!-- 单个轮播组件 -->
+          <div class="glide__slide">
+            <!-- 轮播标题 -->
+            <div class="slide-caption">
+              <h1>用创新点缀人生，让科技融入理想。</h1>
+              <h3>
+                科技创新大平台，智慧生活新引擎。依靠科技进步推进经济跨越式发展。用创新点缀人生，让科技融入理想。
+              </h3>
+              <!-- 探索按钮 -->
+              <button class="explore-btn">探索更多</button>
+            </div>
+            <!-- 背景遮罩 -->
+            <div class="backdrop"></div>
+            <!-- 轮播图片 -->
+            <img src="./images/3.jpg" alt="" />
+          </div>
+          <!-- 第二张轮播 -->
+          <div class="glide__slide">
+            <div class="slide-caption left">
+              <h1>科技改变世界</h1>
+              <h3>
+                立足科学发展，着力自主创新。加速科技进步，为全市经济社会发展提供有力支撑。凝聚科技创意，成就创新梦想。
+              </h3>
+              <button class="explore-btn">探索更多</button>
+            </div>
+            <div class="backdrop"></div>
+            <!-- 轮播视频 -->
+            <!-- <video src="videos/working-man.mp4" muted autoplay loop></video> -->
+            <img src="./images/2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- glide 控制按钮 -->
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          《
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          》
+        </button>
+      </div>
+      <!-- glide 控制圆点 -->
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+      </div>
+    </div>
+
+    <section class="content scope">
+      <div class="scope__title">
+        <div>
+          <h1>业务范围</h1>
+          <p>Scope of business</p>
+        </div>
+        <article>
+          公司在全国各地合同运输车辆700多台；包括平板半挂车、高栏车、厢式车、半封闭车、冷藏车、特种运输车并有自备小型配送货车；有充足的运输保障能力。公司与多家大中型企业建立了长期的战略合作伙伴关系。凭借严谨的运作体系和持续完善的服务网络，竭诚为广大客户提供安全、快速、专业、精准的物流服务。
+        </article>
+      </div>
+      <div class="scope__items">
+        <div>
+          <section><img src="./images/scop1.png.webp" alt="" /></section>
+          <p>公路运输</p>
+          <article>
+            公路运输包括：疏港运输、厢式车运输、特种运输、集装箱汽车运输、出租汽车货运
+          </article>
+        </div>
+        <div>
+          <section><img src="./images/scop2.png.webp" alt="" /></section>
+          <p>仓储服务</p>
+          <article>
+            仓储服务包括：仓库设施（海关监管仓）、核心业务（拼箱、储存、国内运输、多国货物拼箱）
+          </article>
+        </div>
+        <div>
+          <section><img src="./images/scop3.png.webp" alt="" /></section>
+          <p>国际海运代理</p>
+          <article>
+            专注于海运订舱代理服务
+            具有成本和舱位优势，与多家船公司有密切合作关系
+          </article>
+        </div>
+        <div>
+          <section><img src="./images/scop4.png.webp" alt="" /></section>
+          <p>供应链管理</p>
+          <article>
+            全程门到门物流服务，包含运输、仓储、报关报检和海运订舱等订单信息的跟踪、整理和反馈
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="content intro">
+      <div class="intro__background"></div>
+      <div class="intro__1">
+        <div class="intro__title">CULTURE</div>
+        <p class="aaaaaa">品牌实力</p>
+        <div class="intro__article">
+          <p class="title">无微不至 服务入微</p>
+          <font>——</font>
+          <article>
+            大处着眼，小处着手，莫以事小而不为；<br />
+            服务由小见大，闪光处在细微处。
+          </article>
+        </div>
+        <img src="./images/a.webp" alt="" />
+      </div>
+      <div class="intro__2">
+        <div class="intro__article">
+          <p class="title">勇于做小 微利是图</p>
+          <font>——</font>
+          <article>
+            做别人不能做的事情，要把每一件小事情做好、做精、做深；<br />
+            查堵每个环节的漏洞，不简单追求利润的最大化，而要追求客户价值的最大化
+          </article>
+        </div>
+        <img src="./images/b.webp" alt="" />
+        <div class="intro__article">
+          <p class="title">团结协作 敢于创新</p>
+          <font>——</font>
+          <article>
+            团结就是力量，合伙创业，合作创大业；<br />
+            创业是竞争，创新是发展，时时创新，事事创新，处处创新。
+          </article>
+        </div>
+      </div>
+      <div class="intro__3">
+        <img src="./images/c.webp" class="bbbbbb" alt="" />
+        <div class="intro__article">
+          <p class="title">质量方针</p>
+          <font>——</font>
+          <article>
+            诚信为本，顾客至上；<br />
+            安全快捷，科学管理，精益求精。
+          </article>
+        </div>
+        <img src="./images/d.webp" class="bbbbbb" alt="" />
+      </div>
+    </section>
+    <section class="content news">
+      <div class="news__title">
+        <h1>新闻中心</h1>
+        <p>News</p>
+      </div>
+      <div class="news__list list">
+        <div class="list__left">
+          <div class="news__content contentnews">
+            <div class="contentnews__img">
+              <img src="./images/5.jpg" alt="" />
+            </div>
+            <h1>推进“三互”大通关 建设国际物流大通道</h1>
+            <p class="contentnews__time">2019-03-05</p>
+            <p class="contentnews__detail">
+              对于2016《政府工作报告》提出“构建沿线大通关合作机制，建设国际物流大通道”，海关总署署长于广洲接受记者采访表示，海关将以推进“信息互换、监管互认、执法互助”的“三互”大通关为抓手，全力推动国际物…
+            </p>
+            <div class="contentnews__config config">
+              <div class="config__btn">新闻资讯</div>
+              <div class="config__arrow">——></div>
+            </div>
+          </div>
+        </div>
+        <div class="list__right">
+          <div class="news__content contentnews">
+            <div class="contentnews__row">
+              <h1>推进“三互”大通关 建设国际物流大通道</h1>
+              <p class="contentnews__time">2019-03-05</p>
+            </div>
+            <p class="contentnews__detail">
+              对于2016《政府工作报告》提出“构建沿线大通关合作机制，建设国际物流大通道”，海关总署署长于广洲接受记者采访表示，海关将以推进“信息互换、监管互认、执法互助”的“三互”大通关为抓手，全力推动国际物…
+            </p>
+            <div class="contentnews__config config">
+              <div class="config__btn">新闻资讯</div>
+              <div class="config__arrow">——></div>
+            </div>
+          </div>
+          <div class="news__content contentnews">
+            <div class="contentnews__row">
+              <h1>推进“三互”大通关 建设国际物流大通道</h1>
+              <p class="contentnews__time">2019-03-05</p>
+            </div>
+            <p class="contentnews__detail">
+              对于2016《政府工作报告》提出“构建沿线大通关合作机制，建设国际物流大通道”，海关总署署长于广洲接受记者采访表示，海关将以推进“信息互换、监管互认、执法互助”的“三互”大通关为抓手，全力推动国际物…
+            </p>
+            <div class="contentnews__config config">
+              <div class="config__btn">新闻资讯</div>
+              <div class="config__arrow">——></div>
+            </div>
+          </div>
+          <div class="news__content contentnews">
+            <div class="contentnews__row">
+              <h1>推进“三互”大通关 建设国际物流大通道</h1>
+              <p class="contentnews__time">2019-03-05</p>
+            </div>
+            <p class="contentnews__detail">
+              对于2016《政府工作报告》提出“构建沿线大通关合作机制，建设国际物流大通道”，海关总署署长于广洲接受记者采访表示，海关将以推进“信息互换、监管互认、执法互助”的“三互”大通关为抓手，全力推动国际物…
+            </p>
+            <div class="contentnews__config config">
+              <div class="config__btn">新闻资讯</div>
+              <div class="config__arrow">——></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content contect">
+      <div class="contect__title">
+        <h1>联系我们</h1>
+        <p>Contect us</p>
+      </div>
+      <div class="contect__list">
+        <div class="contect__left">
+          <form action="#">
+            <p>起运港/站</p>
+            <input
+              class="contect__text"
+              type="text"
+              name=""
+              id=""
+              placeholder="起运港/站"
+            />
+            <p>目的港/站</p>
+            <input
+              class="contect__text"
+              type="text"
+              name=""
+              id=""
+              placeholder="目的港/站"
+            />
+            <div class="contect__radiotext">单选按钮</div>
+            <div class="contect__radio">
+              <input type="radio" name="a" id="" /><span>陆运</span>
+              <input type="radio" name="a" id="" /><span>水运</span>
+              <input type="radio" name="a" id="" /><span>空运</span>
+              <input type="radio" name="a" id="" /><span>全部</span>
+            </div>
+            <input class="contect__submit" type="submit" value="aaa" />
+          </form>
+        </div>
+        <div class="contect__right">
+          <article>
+            您如果对我们的服务感兴趣或者有任何的疑问，您可以直接给我们留言或直接与我们联络，我们将在收到您的信息后，会第一时间及时与您联络
+          </article>
+          <font>——</font>
+          <ul>
+            <li>联系QQ：258506508</li>
+            <li>手机号码：130000000</li>
+            <li>联系邮箱：xxx@.co.m</li>
+            <li>联系电话：020-000000 000-000000</li>
+            <li>联系地址：XXX省XXX市XXX县XXX路XXX号</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="parter">
+      <div class="parter__title">
+        <h1>战略伙伴</h1>
+        <p>Partner</p>
+      </div>
+      <div class="parter__list">
+        <ul class="parter__row">
+          <li><img src="./images/partner1.png.webp" alt="" /></li>
+          <li><img src="./images/partner2.png.webp" alt="" /></li>
+          <li><img src="./images/partner3.png.webp" alt="" /></li>
+          <li><img src="./images/partner4.png.webp" alt="" /></li>
+        </ul>
+        <ul class="parter__row">
+          <li><img src="./images/partner5.png.webp" alt="" /></li>
+          <li><img src="./images/partner6.png.webp" alt="" /></li>
+          <li><img src="./images/partner7.png.webp" alt="" /></li>
+          <li><img src="./images/partner8.png.webp" alt="" /></li>
+        </ul>
+      </div>
+    </section>
+    <footer class="content footer">
+      <div class="footer__row1">
+        <div>客服QQ：258506508</div>
+        <div>联系电话：020-000000</div>
+        <div>联系邮箱：xxx@.co.m</div>
+      </div>
+      <div class="footer__row2">©2020 - XXXXXXX平台 版权所有</div>
+    </footer>
+    <!-- 轮播插件 -->
+    <script src="libs/glide/glide.min.js"></script>
+    <!-- 动画组件 -->
+    <script src="libs/anime/anime.min.js"></script>
+    <!-- js -->
+    <script src="index.js"></script>
+  </body>
+</html>
